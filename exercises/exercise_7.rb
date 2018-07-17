@@ -9,4 +9,7 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+@input = gets.chomp
+@userstore = Store.create(name: @input, womens_apparel: false, mens_apparel: false)
+puts @userstore.valid?
+puts @userstore.errors.messages
